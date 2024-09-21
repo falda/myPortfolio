@@ -1,26 +1,40 @@
 .navigation{
-    // fix and keep the navigation bar on top of the screen
-    position: fixed;
+    // A sticky element toggles between relative and fixed, depending on the scroll position. 
+    position: -webkit-sticky; 
+    position: sticky;
     top: 0;
 
-    width: 100%;
+    // The element floats to the left of its container
     float: left;
- 
+
+    // The overflow is clipped, and the rest of the content will be invisible
     overflow: hidden;
+
+    width: 100%;
     background-color: #333;
   
     a {
+        // Display items horizontally
         display: inline-block;
-        color: white;
+        
+        //  Set the horizontal alignment of the text.
         text-align: center;
-        padding: 14px 16px;     
-    }
 
+        color: white;
+        padding: 14px 16px;  
+        text-decoration: none;   
+        
+        &:hover {
+            background-color: #111;
+        }
+
+        
+    }  
+
+    // change background color of the page-link the user is currently on
     .active {
         background-color: #04AA6D;
-    }
-    
-    a:hover {
-        background-color: #111;
-      }
+    }    
 }
+
+        

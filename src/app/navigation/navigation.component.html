@@ -1,6 +1,6 @@
 <nav class="navigation" >
-    <a routerLink="/" ngClass=".active">Home</a>
-    <a routerLink="about">About</a>
-    <a routerLink="projects">Projects</a>
-    <a routerLink="contact">Contact</a>
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+    <a routerLink="about" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">About</a>
+    <a routerLink="projects" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Projects</a>
+    <a routerLink="contact" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Contact</a>
 </nav>
