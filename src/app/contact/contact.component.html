@@ -1,1 +1,30 @@
-<p>contact works!</p>
+<div class="contact-container">
+    <section class="contact-intro">
+        <h1>Get in Touch</h1>
+        <p>
+            Whether you're interested in working together, have a project in mind, or just want to chat, 
+            feel free to reach out to me. I am always open to new opportunities and collaborations.
+        </p>
+    </section>
+
+    <section class="contact-form">
+        <h3>Contact Me</h3>
+        <form id="contactForm">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" [(ngModel)]="name" required />
+    
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" [(ngModel)]="message" required></textarea>
+    
+            <button type="button" (click)="sendMail()">Send Message</button>
+        </form>
+    </section>
+    
+    <section class="direct-contact">
+        <h3>Direct Contact</h3>
+        <p>
+            Email: <a href="mailto:loifalda@gmail.com">loifalda"&#64;"gmail.com</a>
+            Phone: <a href="tel:+33616836748">+33 6 16 83 67 48</a>
+        </p>
+    </section>
+</div>

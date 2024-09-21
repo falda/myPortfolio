@@ -1,0 +1,26 @@
+.navigation{
+    // fix and keep the navigation bar on top of the screen
+    position: fixed;
+    top: 0;
+
+    width: 100%;
+    float: left;
+ 
+    overflow: hidden;
+    background-color: #333;
+  
+    a {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;     
+    }
+
+    .active {
+        background-color: #04AA6D;
+    }
+    
+    a:hover {
+        background-color: #111;
+      }
+}

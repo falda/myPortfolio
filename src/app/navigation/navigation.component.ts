@@ -1,3 +1,4 @@
+import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
@@ -5,7 +6,8 @@ import { RouterLink } from '@angular/router';
   selector: 'app-navigation',
   standalone: true,
   imports: [
-    RouterLink
+    RouterLink,
+    NgClass
   ],
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.scss'
