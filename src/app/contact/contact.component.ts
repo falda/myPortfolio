@@ -16,7 +16,7 @@ export class ContactComponent {
 
   sendMail(): void {
     const subject = encodeURIComponent(`Message from ${this.name}`);
-    const body = encodeURIComponent(`Name: ${this.name}\nMessage:\n"${this.message}`
+    const body = encodeURIComponent(`Name: ${this.name}\nMessage:\n${this.message}`
     );
 
     window.location.href = `mailto:loifalda@gmail.com?subject=${subject}&body=${body}`;

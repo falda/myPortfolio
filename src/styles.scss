@@ -1,4 +1,79 @@
+$primary-color: #04AA6D;
+
 * {
     margin: 0;
     padding: 0;
+
+    // Include border and padding inside height and width
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    background-color: #eef2f3;    
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 700; 
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+a {
+    text-decoration: none;
+
+    // Keep default color
+    color: inherit;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+
+.button {
+    background-color: $primary-color;
+    color: #f1f1f1;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+
+    // Round corners
+    border-radius: 5px;
+
+    // Change cursor to pointer on hover
+    cursor: pointer;
+
+    // Smooth transition for hover effect
+    transition: all 0.3s ease;
+
+    &:hover {
+        // Slight upward movement on hover
+        transform: translateY(-2px);
+
+        background-color: darken($primary-color, 10%);
+    }
+
+    &:active {
+        // Reset position when active
+        transform: translateY(0);
+
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    &:focus {
+        // Remove default outline
+        outline: none;
+        
+        box-shadow: 0 0 0 3px rgba($primary-color, 0.5);
+    }
 }

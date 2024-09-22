@@ -1,3 +1,6 @@
+$primary-color: #04AA6D;
+$darken-primary-color: darken($primary-color, 10%);
+
 .navigation{
     // A sticky element toggles between relative and fixed, depending on the scroll position. 
     position: -webkit-sticky; 
@@ -12,6 +15,7 @@
 
     width: 100%;
     background-color: #333;
+    margin-bottom: 50px;
   
     a {
         // Display items horizontally
@@ -20,21 +24,42 @@
         //  Set the horizontal alignment of the text.
         text-align: center;
 
-        color: white;
+        // Transition for smooth color change on hover
+        transition: background-color 0.3s ease;
+    
+
+        color: #f1f1f1;;
         padding: 14px 16px;  
-        text-decoration: none;   
+        border-right: 1px solid #555; 
         
         &:hover {
-            background-color: #111;
+            background-color: $darken-primary-color;
         }
 
-        
+        &:last-child {
+            border-right: none; 
+        }
+
+        &:focus {
+            // Highlight the focused link
+            outline: 2px solid $darken-primary-color;
+        }
     }  
 
-    // change background color of the page-link the user is currently on
+    // Change background color of the page-link the user is currently on
     .active {
-        background-color: #04AA6D;
+        background-color: $primary-color;
     }    
 }
 
-        
+// Change on small screen
+@media (max-width: 768px) {
+    .navigation {
+        position: static;
+
+        a {
+            display: block;
+            width: 100%; 
+        }
+    }
+}

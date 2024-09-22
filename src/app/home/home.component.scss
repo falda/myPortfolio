@@ -1,0 +1,52 @@
+.home-container {
+    display: flex;
+
+    // Center horizontaly 
+    justify-content: center; 
+
+    // Center vertically
+    align-items: center;   
+
+    width: 100%;
+    height: 70vh;  
+
+    .left, .right {
+        height: auto; 
+    }
+
+    .left {
+        width: 30%;
+        display: flex;
+        text-align: left;  
+
+        // Align vertically
+        flex-direction: column;    
+    }
+
+    .right {
+        width: 20%;
+        display: flex;
+        align-items: center;  
+        flex-direction: column;     
+    }
+
+    .call-to-actions {
+        // Center titles and buttons
+        text-align: center;  
+    }
+}
+
+// Change on small screen
+@media (max-width: 768px) {
+    .home-container {
+        display:block;
+        width: 100%;
+        height: auto;
+
+        .left, .right {
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+        }
+    }
+}
