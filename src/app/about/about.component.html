@@ -1,56 +1,58 @@
-<div class="about-container">
-    <h1>About me</h1>
+<div id="about" class="container">
+    <div class="left">
+        <h1>About me</h1>
+    
+        <section class="introduction">
+            <h2>Who I am</h2>
+            <p>
+                My name is Loïc Falda, and I am currently a student in computer development. 
+                I have a solid foundation in programming and information systems management, 
+                thanks to my education in IT services at UFIP Business School in Nice.
+                I am seeking an apprenticeship to further my learning and gain practical experience in real-world projects.
+            </p>
+        </section>
+    
+        <section class="experience">
+            <h2>Experience</h2>
+            <p>
+                I have diverse work experience, including managing teams at McDonald's in Menton, where I supervised staff, 
+                handled stock management, and ensured compliance with quality and hygiene standards. 
+                I've also worked at Intermarché in product restocking, and during Menton's famous Lemon Festival, 
+                I assisted with managing crowd flow as a health pass controller.
+            </p>
+        </section>
+    
+        <section class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Programming Languages: HTML, SCSS, JavaScript, TypeScript, Java</li>
+                <li>Frameworks: Basic knowledge of React, Angular, Spring</li>
+                <li>Development Tools: Git, Visual Studio Code</li>
+                <li>Databases: Basic knowledge of MySQL, PostgreSQL, SQLite</li>
+            </ul>
+        </section>
+    
+        <section class="languages">
+            <h2>Languages</h2>
+            <p>
+                I am fluent in French, and I also have a good command of English and Italian.
+            </p>
+        </section>
+    
+        <section class="goals">
+            <h2>Future Goals</h2>
+            <p>
+                My goal is to continue improving my technical skills, contribute actively to real-world projects, 
+                and find an apprenticeship that allows me to grow as a developer.
+            </p>
+        </section>
+    </div>
 
-    <section class="introduction">
-        <h2>Who I am</h2>
-        <p>
-            My name is Loïc Falda, and I am currently a student in computer development. 
-            I have a solid foundation in programming and information systems management, 
-            thanks to my education in IT services at UFIP Business School in Nice.
-            I am seeking an apprenticeship to further my learning and gain practical experience in real-world projects.
-        </p>
-    </section>
-
-    <section class="experience">
-        <h2>Experience</h2>
-        <p>
-            I have diverse work experience, including managing teams at McDonald's in Menton, where I supervised staff, 
-            handled stock management, and ensured compliance with quality and hygiene standards. 
-            I've also worked at Intermarché in product restocking, and during Menton's famous Lemon Festival, 
-            I assisted with managing crowd flow as a health pass controller.
-        </p>
-    </section>
-
-    <section class="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Programming Languages: HTML, SCSS, JavaScript, TypeScript, Java</li>
-            <li>Frameworks: Basic knowledge of React, Angular, Spring</li>
-            <li>Development Tools: Git, Visual Studio Code</li>
-            <li>Databases: Basic knowledge of MySQL, PostgreSQL, SQLite</li>
-        </ul>
-    </section>
-
-    <section class="languages">
-        <h2>Languages</h2>
-        <p>
-            I am fluent in French, and I also have a good command of English and Italian.
-        </p>
-    </section>
-
-    <section class="goals">
-        <h2>Future Goals</h2>
-        <p>
-            My goal is to continue improving my technical skills, contribute actively to real-world projects, 
-            and find an apprenticeship that allows me to grow as a developer.
-        </p>
-    </section>
-
-    <section class="cv">
-        <h2>My CV</h2>
-        <a href="/myCV.pdf" download>
-            <button class="button">Download here</button>
-        </a>
-        <iframe src="/myCV.pdf" width="600" height="800"></iframe>
-    </section>
+    <div class="right">
+        <section class="cv">
+            <h2>My CV</h2>
+            <button class="button" (click)="downloadCV()">Download here</button>
+            <iframe src="/myCV.pdf" width="600" height="800"></iframe>
+        </section>
+    </div>
 </div>

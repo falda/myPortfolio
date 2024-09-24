@@ -3,8 +3,7 @@ $darken-primary-color: darken($primary-color, 10%);
 
 .navigation{
     // A sticky element toggles between relative and fixed, depending on the scroll position. 
-    position: -webkit-sticky; 
-    position: sticky;
+    position: static;
     top: 0;
 
     // The element floats to the left of its container
@@ -15,7 +14,6 @@ $darken-primary-color: darken($primary-color, 10%);
 
     width: 100%;
     background-color: #333;
-    margin-bottom: 50px;
   
     a {
         // Display items horizontally

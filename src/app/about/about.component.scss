@@ -1,0 +1,19 @@
+#about {
+    height: auto;
+    .left {
+        width: 50%;
+    }
+
+    .right {
+        width: 30%;
+        text-align: center;
+
+        iframe {
+            height: 700px;
+            width: 100%;
+            min-width: 450px;
+            padding: auto;
+        }
+    }
+}
+
