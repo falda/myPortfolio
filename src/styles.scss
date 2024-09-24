@@ -1,4 +1,6 @@
+$background-color: #eef2f3;    
 $primary-color: #04AA6D;
+$padding: 20px;
 
 * {
     margin: 0;
@@ -10,22 +12,29 @@ $primary-color: #04AA6D;
 
 html, body {
     height: 100%;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    background-color: #eef2f3;    
+    background-color: darken($background-color, 3%);    
 }
 
 h1, h2, h3 {
     font-family: 'Montserrat', sans-serif; 
+    font-family: 'Playfair Display', serif;
     font-weight: 700; 
 }
 
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
+h1 {
+    font-size: 3rem;
+    margin-bottom: $padding;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: $padding;
 }
 
 a {
@@ -39,13 +48,61 @@ ul, ol {
     list-style: none;
 }
 
+span {
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    
+    // Center horizontaly 
+    justify-content: center;
+
+    // Center vertically
+    align-items: center;
+
+    width: 100%;
+    height: 70vh;
+    padding: $padding;
+    
+    .left, .right {
+        height: auto; 
+        padding: $padding;
+    }
+
+    .left {
+        width: 30%;
+        display: flex;
+        text-align: left;  
+
+        // Align vertically
+        flex-direction: column;
+    }
+
+    .right {
+        width: 20%;
+        display: flex;
+        align-items: center;  
+        flex-direction: column; 
+        
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        border-radius: 10px;
+        padding: $padding;
+        background-color: $background-color;
+
+        &:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+    }
+}
 
 .button {
     background-color: $primary-color;
     color: #f1f1f1;
     border: none;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 10px $padding;
+    font-size: 1.2rem;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
 
     // Round corners
     border-radius: 5px;
@@ -61,6 +118,7 @@ ul, ol {
         transform: translateY(-2px);
 
         background-color: darken($primary-color, 10%);
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     }
 
     &:active {
@@ -75,5 +133,19 @@ ul, ol {
         outline: none;
         
         box-shadow: 0 0 0 3px rgba($primary-color, 0.5);
+    }
+}
+
+@media (max-width: 768px) {
+    .container{
+        flex-direction: column;
+        height: auto;
+
+        .left, .right {
+            width: 100% !important;
+            text-align: center;
+            padding: 20px;
+        }
+
     }
 }
